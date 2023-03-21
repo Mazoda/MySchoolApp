@@ -16,7 +16,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,6 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -41,8 +41,8 @@ class MyHomePage extends StatelessWidget {
         builder: (context, child) {
           return MaterialApp(
             navigatorKey: AppRoute.navkey,
-            home: const Splash(),
             debugShowCheckedModeBanner: false,
+            home: const Splash(),
           );
         });
   }
