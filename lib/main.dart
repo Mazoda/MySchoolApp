@@ -11,24 +11,9 @@ import 'package:myschool/router/app_router.dart';
 
 void main() async {
   // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MyApp());
+  runApp(const MyHomePage());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -41,6 +26,10 @@ class MyHomePage extends StatelessWidget {
           return MaterialApp(
             navigatorKey: AppRouter.navkey,
             debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              fontFamily: 'Poppins',
+              primarySwatch: Colors.grey
+            ),
             home: const SplashScreen(),
           );
         });

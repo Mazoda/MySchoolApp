@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ArticalWidget extends StatelessWidget {
   const ArticalWidget({super.key});
@@ -26,8 +25,7 @@ class ArticalWidget extends StatelessWidget {
           Text(
             "Final Exams Are Knocking! Prepare...",
             maxLines: 2,
-            style: GoogleFonts.poppins(
-                fontSize: 20.sp, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold)
           ),
           SizedBox(
             height: 8.w,
@@ -35,10 +33,9 @@ class ArticalWidget extends StatelessWidget {
           Text(
             "The final exams for all grades will begin at 5th May, consider preparation for...",
             maxLines: 2,
-            style: GoogleFonts.poppins(
-                fontSize: 14.sp,
+            style: TextStyle(fontSize: 14.sp,
                 fontWeight: FontWeight.w100,
-                color: Colors.grey),
+                color: Colors.grey)
           ),
         ],
       ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 // import 'package:myschool/Views/Widgets/artical_widget.dart';
 
 class StudentHomePage extends StatelessWidget {
@@ -27,13 +26,11 @@ class StudentHomePage extends StatelessWidget {
                       )),
                   Text(
                     "Welcome Aladdin_1923123",
-                    style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
+                    style:TextStyle(
                           fontSize: 16.sp,
                           color: Colors.black,
                           fontWeight: FontWeight.bold),
                     ),
-                  )
                 ],
               ),
               SizedBox(
@@ -45,7 +42,7 @@ class StudentHomePage extends StatelessWidget {
                   ListView.builder(
                       itemCount: 5,
                       itemBuilder: (BuildContext context, int index) {
-                        return   Container(
+                        return SizedBox(
                           width: 312.w,
                           height: 217.h,
                           child: ListTile(
