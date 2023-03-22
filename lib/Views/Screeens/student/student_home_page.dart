@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:myschool/Views/Widgets/Artical_Widget.dart';
+// import 'package:myschool/Views/Widgets/artical_widget.dart';
 
 class StudentHomePage extends StatelessWidget {
   const StudentHomePage({super.key});
@@ -45,7 +45,7 @@ class StudentHomePage extends StatelessWidget {
                   ListView.builder(
                       itemCount: 5,
                       itemBuilder: (BuildContext context, int index) {
-                        return Container(
+                        return   Container(
                           width: 312.w,
                           height: 217.h,
                           child: ListTile(
