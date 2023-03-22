@@ -11,26 +11,25 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> {
+  @override
   initState() {
+    super.initState();
     Future.delayed(const Duration(seconds: 5), () {
-      print("Width: " + MediaQuery.of(context).size.width.toString());
-      print("*****************  ");
-      print("Hight: " + MediaQuery.of(context).size.height.toString());
-      AppRoute.PushWithReplacementToWidget(const LoginScreen());
+      AppRouter.PushWithReplacementToWidget(const LoginScreen());
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: 411.w,
-        height: 891.h,
+      body: SizedBox(
+        width: 360.w,
+        height: 800.h,
         child: Center(
           child: Image.asset(
             'assets/images/myschool.png',
-            width: 360.w,
-            height: 285.h,
+            width: 285.w,
+            height: 300.h,
             fit: BoxFit.contain,
           ),
         ),

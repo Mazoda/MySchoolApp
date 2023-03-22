@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myschool/Views/Splash/splashScreen.dart';
 import 'package:myschool/router/AppRouter.dart';
-import 'package:provider/provider.dart';
-import 'firebase_options.dart';
+// import 'package:provider/provider.dart';
+// import 'firebase_options.dart';
 
 // ...
 
@@ -35,12 +35,12 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: const Size(411.4, 891.4),
+        designSize: const Size(360, 800),
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
           return MaterialApp(
-            navigatorKey: AppRoute.navkey,
+            navigatorKey: AppRouter.navkey,
             debugShowCheckedModeBanner: false,
             home: const Splash(),
           );

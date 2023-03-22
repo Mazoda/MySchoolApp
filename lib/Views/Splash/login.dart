@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myschool/Views/Screeens/student/student_home_page.dart';
+import 'package:myschool/router/AppRouter.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -25,8 +27,8 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
           Container(
-            width: 411.w,
-            height: (891 - 220).h,
+            width: 360.w,
+            height: (800 - 220).h,
             margin: EdgeInsets.only(top: 51.h),
             padding: EdgeInsets.symmetric(horizontal: 45.w, vertical: 38.h),
             decoration: BoxDecoration(
@@ -52,7 +54,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 //TODO : Edit Email TextField
 
-               const TextField(),
+                const TextField(),
                 SizedBox(
                   height: 20.h,
                 ),
@@ -71,14 +73,17 @@ class LoginScreen extends StatelessWidget {
                 ),
                 //TODO : Edit PasswWord TextField
 
-               const TextField(),
+                const TextField(),
                 Container(
                   margin: EdgeInsets.only(top: 34.h),
                   child: SizedBox(
                     height: 50.h,
                     width: 240.w,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        AppRouter.PushWithReplacementToWidget(
+                            const StudentHomePage());
+                      },
                       style: ElevatedButton.styleFrom(
                           shape: const StadiumBorder(),
                           foregroundColor:
@@ -100,21 +105,20 @@ class LoginScreen extends StatelessWidget {
                   height: 10.h,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Faild to login?",
-                        textAlign: TextAlign.left,
                         style: GoogleFonts.poppins(
                           textStyle: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 18.sp,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         )),
                     Text(" Contact Us",
-                        textAlign: TextAlign.left,
                         style: GoogleFonts.poppins(
                           textStyle: TextStyle(
-                              fontSize: 24.sp,
-                              color:const Color.fromARGB(207, 150, 39, 48),
+                              fontSize: 18.sp,
+                              color: const Color.fromARGB(207, 150, 39, 48),
                               fontWeight: FontWeight.bold),
                         )),
                   ],
