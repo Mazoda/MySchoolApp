@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myschool/Views/Screeens/student/student_home_page.dart';
-import 'package:myschool/router/AppRouter.dart';
+import 'package:myschool/router/app_router.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -81,7 +81,7 @@ class LoginScreen extends StatelessWidget {
                     width: 240.w,
                     child: ElevatedButton(
                       onPressed: () {
-                        AppRouter.PushWithReplacementToWidget(
+                        AppRouter.pushWithReplacementToWidget(
                             const StudentHomePage());
                       },
                       style: ElevatedButton.styleFrom(
