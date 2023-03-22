@@ -37,8 +37,6 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
         designSize: const Size(360, 800),
-        minTextAdapt: true,
-        splitScreenMode: true,
         builder: (context, child) {
           return MaterialApp(
             navigatorKey: AppRouter.navkey,
