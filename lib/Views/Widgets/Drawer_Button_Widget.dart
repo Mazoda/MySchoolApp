@@ -5,7 +5,7 @@ class DrawerButton extends StatelessWidget {
   DrawerButton({Key? key,required this.title,required this.onButtonPressed,required this.iconButton}) : super(key: key);
   String title;
   Function onButtonPressed;
-  Icon iconButton;
+  IconData iconButton;
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -22,10 +22,10 @@ class DrawerButton extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(Icons.abc,size: 30,color: Color.fromRGBO(124, 124, 122, 1.0),),
+              Icon(iconButton,size: 24.sp,color:const Color.fromRGBO(124, 124, 122, 1.0),),
               Container(
                   margin: EdgeInsets.only(left: 10.w),
-                  child: Text(title,style: TextStyle(color:const Color.fromRGBO(51, 51, 51, 1.0),fontSize: 16.sp),)
+                  child: Text(title,style: TextStyle(color:const Color.fromRGBO(51, 51, 51, 1.0),fontFamily: 'Inter',fontSize: 16.sp),)
               ),
             ],
           ),

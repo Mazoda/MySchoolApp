@@ -1,6 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myschool/router/app_router.dart';
+
+import 'Drawer_Button_Widget.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({Key? key}) : super(key: key);
@@ -104,30 +107,62 @@ class DrawerWidget extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 50.h,),
-                TextButton(
-                  style: TextButton.styleFrom(
-                      foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                      backgroundColor:const Color.fromRGBO(217, 217, 217, 1.0)
-                  ),
-                  onPressed: (){
+                DrawerButton(
+                  title: 'Notifications',
+                  onButtonPressed: (){
 
                   },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          const Icon(Icons.notifications,size: 30,color: Color.fromRGBO(124, 124, 122, 1.0),),
-                          Container(
-                            margin: EdgeInsets.only(left: 10.w),
-                            child: Text('Notifications',style: TextStyle(color:const Color.fromRGBO(51, 51, 51, 1.0),fontSize: 16.sp),)
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                  iconButton: Icons.notifications,
                 ),
+                SizedBox(height: 20.h,),
+                DrawerButton(
+                  title: 'Profile',
+                  onButtonPressed: (){
+
+                  },
+                  iconButton: CupertinoIcons.chart_bar_alt_fill,
+                ),
+                SizedBox(height: 20.h,),
+                DrawerButton(
+                  title: 'Result',
+                  onButtonPressed: (){
+
+                  },
+                  iconButton: Icons.data_usage_outlined,
+                ),
+                SizedBox(height: 20.h,),
+                DrawerButton(
+                  title: 'Routine',
+                  onButtonPressed: (){
+
+                  },
+                  iconButton: Icons.calendar_today_sharp,
+                ),
+                SizedBox(height: 20.h,),
+                DrawerButton(
+                  title: 'Homework',
+                  onButtonPressed: (){
+
+                  },
+                  iconButton: Icons.auto_stories_outlined,
+                ),
+                Spacer(),
+                DrawerButton(
+                  title: 'Logout',
+                  onButtonPressed: (){
+
+                  },
+                  iconButton: Icons.logout_rounded,
+                ),
+                SizedBox(height: 20.h,),
+                DrawerButton(
+                  title: 'Dark Mode',
+                  onButtonPressed: (){
+
+                  },
+                  iconButton: Icons.dark_mode,
+                ),
+                SizedBox(height: 20.h,),
               ],
             ),
           ),
