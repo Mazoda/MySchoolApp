@@ -16,10 +16,7 @@ class AppRouter {
     }));
   }
 
-  static pop(Widget widget) {
-    Navigator.of(navkey.currentContext!)
-        .pop(MaterialPageRoute(builder: (context) {
-      return widget;
-    }));
+  static pop() {
+    Navigator.of(navkey.currentContext!).pop();
   }
 }

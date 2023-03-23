@@ -70,29 +70,29 @@ class LoginScreen extends StatelessWidget {
                   //TODO : Edit PassWord TextField
 
                   const TextField(),
-                  Container(
-                    margin: EdgeInsets.only(top: 34.h),
-                    child: SizedBox(
-                      height: 50.h,
-                      width: 240.w,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          AppRouter.pushWithReplacementToWidget(
-                              const StudentHomePage());
-                        },
-                        style: ElevatedButton.styleFrom(
-                            shape: const StadiumBorder(),
-                            backgroundColor: const Color.fromRGBO(32, 135, 255, 0.73),
-                        ),
-                        child: Text(
-                          "Login",
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontSize: 24.sp,
-                            color: Colors.black,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.bold),
-                        ),
+                  SizedBox(
+                    height: 34.h,
+                  ),
+                  SizedBox(
+                    height: 50.h,
+                    width: 240.w,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        AppRouter.pushWithReplacementToWidget(
+                            const StudentHomePage());
+                      },
+                      style: ElevatedButton.styleFrom(
+                          shape: const StadiumBorder(),
+                          backgroundColor: const Color.fromRGBO(32, 135, 255, 0.73),
+                      ),
+                      child: Text(
+                        "Login",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 24.sp,
+                          color: Colors.black,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
